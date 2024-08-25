@@ -13,11 +13,11 @@ print(df.describe())
 print(df.info())
 print(df.isnull().sum())
 
-#Drop Unnamed Column
+Drop Unnamed Column
 df=df.drop("Unnamed: 0",axis=1)
 print(df)
 
-#Gender Distribution
+Gender Distribution
 plt.figure(figsize=(5,5))
 ax = sns.countplot(data=df,x="Gender")
 ax.bar_label(ax.containers[0])
@@ -59,7 +59,7 @@ plt.show()
 
 print(df["EthnicGroup"].unique())
 
-#Distribution of Ethnic Groups
+Distribution of Ethnic Groups
 
 groupA = df.loc[(df["EthnicGroup"]=="group A")].count()
 
